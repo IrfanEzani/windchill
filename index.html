@@ -9,48 +9,22 @@
 <body>
 
     <div class="container">
-        <label for="velocity">Wind Velocity <span>(mph)</span> </label>
+        <label for="velocity">Wind Velocity <span id="v-unit">(mph)</span> </label>
         <input type="text" name='velocity' id="velocity">
-        <label for="temperature">Temperature <span>(°F)</span> </label>
+        <label for="temperature">Temperature <span id="t-unit">(°F)</span> </label>
         <input type="text" name='temperature' id="temperature">
-        <button type="submit" onclick="convert()">Calculate</button>
+        <button type="submit" id="btn">Calculate</button>
+        <div class="switch-container">
+            <p>Imperial Unit</p>
+            <label class="switch">
+                <input type="checkbox" id="metric">
+                <span class="slider round"></span>
+              </label>
+              <p>Metric Unit</p>
+        </div>
         <input type="number" name="answer" id="answer" readonly>
     </div>
 
-    <script>
-        
-function convert() {
-    const windVelocity = document.getElementById('velocity');
-    const temperature = document.getElementById('temperature');
-    let answer = document.getElementById('answer');
-
-    let windValue = parseInt(windVelocity.value);
-    let tempValue = parseInt(temperature.value);
-
-
-    //imperial formula
-    let x = 0.6215 * tempValue;
-    let y = 0.4275 * tempValue;
-    let z = Math.pow(windValue, 0.16);
-    //imperial answer
-    answer.value = Math.round(35.74 + x - 35.75 * z + y * z);
-    //metric formula
-    let a = 0.3965 * tempValue;
-    //metric answer
-    //answer.value = Math.round(13.12 + x - 11.37 * z + a * z);
-
-
-
-    windVelocity.value = null;
-    temperature.value = null;
-    return;
-}
-
-//WCI ;
-//metric =13.12 + 0.6215T – 11.37 (V^0.16) + 0.3965T (V^0.16)
-
-
-//imperial = 35.74 + 0.6215T – 35.75 (V^0.16) + 0.4275T (V^0.16)
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
