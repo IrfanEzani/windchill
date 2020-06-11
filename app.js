@@ -22,7 +22,6 @@ function check(element) {
         btn.addEventListener('click', convertMetric);
     }
 
-
     else {
         vUnit.innerText = ' (mph) '; 
         tUnit.innerText = ' (°F) ';

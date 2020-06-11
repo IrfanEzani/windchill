@@ -1,27 +1,91 @@
+::root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: darkseagreen;
     font-family: 'Lato', sans-serif;
+    margin: 0;
+    background: url('bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 }
 
 .container {
-    border: 2px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 1rem;
-    width: 50vw;
+    min-width: 40vw;
+    background-color: #fff;
+    font-weight: 700;
+    box-shadow:  20px 20px 30px #d9d9d9; 
+}
+.container label {
+  margin: 10px;
 }
 
-input, button {
-    margin: 10px 0;
-    padding: 10px;
+.container button {
+  color: #fff;
+  background-color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px;
+  width: 15vw;
 }
+
+.container input {
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+input, button {
+  margin: 10px 0;
+  padding: 10px;
+  border: none; 
+  outline: none;   
+  border-radius: 10px;
+  background-color: skyblue;
+  box-shadow:  5px 5px 10px #d9d9d9, 
+           -5px -5px 10px #ffffff;
+}
+
+.img-container {
+  margin: 0;
+  width: 60vw;
+  padding: 1em 2em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.img-container img {
+  width: 500px;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.img-container h2 {
+  margin: 0;
+}
+
+.img-container p {
+  margin: 10px;
+}
+
+
 .switch-container {
     display: flex;
     justify-content: center;
@@ -29,6 +93,10 @@ input, button {
     margin: 5px;
     padding: 5px;
     border: 1px solid white;
+    border-radius: 46px;
+background: #ffffff;
+box-shadow:  7px 7px 14px #d9d9d9, 
+             -7px -7px 14px #ffffff;
 }
 
 .switch-container p {

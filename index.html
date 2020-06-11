@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
+        <h1>Wind Chill Calculator</h1>
         <label for="velocity">Wind Velocity <span id="v-unit">(mph)</span> </label>
-        <input type="text" name='velocity' id="velocity">
+        <input type="number" name='velocity' id="velocity">
         <label for="temperature">Temperature <span id="t-unit">(°F)</span> </label>
-        <input type="text" name='temperature' id="temperature">
+        <input type="number" name='temperature' id="temperature">
         <button type="submit" id="btn">Calculate</button>
         <div class="switch-container">
             <p>Imperial Unit</p>
@@ -22,9 +22,18 @@
               </label>
               <p>Metric Unit</p>
         </div>
+        <label for="answer">Answer</label>
         <input type="number" name="answer" id="answer" readonly>
     </div>
 
+    <div class="img-container">
+        <h2>What is wind chill?</h2>
+        <p>A wind chill index accounts for a combination of air temperature and how fast the wind is blowing. Higher winds strip heat away from the body more quickly. </p>
+        <p><b>Formula of Windchill = </b>
+            13.12 + 0.6215T – 11.37 (V^0.16) + 0.3965T (V^0.16)
+        </p>
+        <img src="windchill.jpg" alt="">
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
